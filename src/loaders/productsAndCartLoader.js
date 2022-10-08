@@ -12,7 +12,7 @@ export const productsAndCartLoader = async () => {
     for (const id in savedCart) {
         const addedProduct = products.find(product => product.id === id);
         if (addedProduct) {
-            const quantity = savedCart[id];
+            const quantity = savedCart[id]; // console.log()
             addedProduct.quantity = quantity;
             initialCart.push(addedProduct);
         }
